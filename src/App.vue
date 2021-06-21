@@ -1,16 +1,19 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
     <router-view />
   </div>
 </template>
 
 <style lang="scss">
+html,body,#app{
+  height: 100%;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
-#nav {
-  padding: 30px;
+:root {
+  --van-button-primary-background-color: #fcb01d;
+  --van-button-primary-border-color:#fcb01d;
+  --van-button-border-radius:10px
 }
 </style>
