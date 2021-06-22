@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 import 'lib-flexible/flexible'
 
-import { Button, Cell, CellGroup } from 'vant';
+import { Button, Cell, CellGroup,Tabbar, TabbarItem ,Skeleton } from 'vant';
 
 createApp(App)
     .use(store)
@@ -12,5 +12,8 @@ createApp(App)
     .use(Button)
     .use(Cell)
     .use(CellGroup)
+    .use(Tabbar)
+    .use(TabbarItem)
+    .use(Skeleton)
     .mount("#app");
 
