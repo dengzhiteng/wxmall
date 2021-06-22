@@ -13,7 +13,7 @@ module.exports = {
                         hack: `true; @import "your-less-file-path.less";`,
                     },
                 },
-            },
+            }
         },
     },
 };

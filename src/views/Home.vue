@@ -17,6 +17,8 @@ export default {
 <style  lang="scss" scoped>
 .desc {
   color: red;
-  font-size: 12px;
+  font-size:14px;
+  width:200px;
+  margin:0;
 }
 </style>

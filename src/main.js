@@ -2,10 +2,9 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-// import 'amfe-flexible'
+import 'lib-flexible/flexible'
 
 import { Button, Cell, CellGroup } from 'vant';
-import { ConfigProvider } from 'vant';
 
 createApp(App)
     .use(store)
@@ -13,5 +12,5 @@ createApp(App)
     .use(Button)
     .use(Cell)
     .use(CellGroup)
-    .use(ConfigProvider)
     .mount("#app");
+
