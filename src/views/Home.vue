@@ -4,7 +4,7 @@
       <van-cell title="单元格" value="内容" />
       <van-cell title="单元格" value="内容" label="描述信息" />
     </van-cell-group>
-    <p class="desc">test</p>
+    <p class="desc">test <span>44444444444444444</span></p>
   </div>
 </template>
 
@@ -20,5 +20,8 @@ export default {
   font-size: 14px;
   width: 200px;
   margin: 0;
+  span {
+    color: block;
+  }
 }
 </style>
