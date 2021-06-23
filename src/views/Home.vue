@@ -4,14 +4,17 @@
       <van-cell title="单元格" value="内容" />
       <van-cell title="单元格" value="内容" label="描述信息" />
     </van-cell-group>
-    <p class="desc">test <span>44444444444444444</span></p>
+    <p class="desc">test</p>
   </div>
 </template>
 
 <script>
+import { getHomeSwiper } from '@/api/home';
 export default {
   name: 'Home',
-  components: {},
+  created() {
+    getHomeSwiper();
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -21,7 +24,7 @@ export default {
   width: 200px;
   margin: 0;
   span {
-    color: block;
+    color: black;
   }
 }
 </style>
