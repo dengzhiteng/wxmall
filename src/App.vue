@@ -4,13 +4,24 @@
       <router-view />
     </van-skeleton>
     <van-tabbar v-model="active" v-if="isShowtabber">
-      <van-tabbar-item replace to="/home" icon="wap-home-o">首页</van-tabbar-item>
-      <van-tabbar-item replace to="/cart" icon="shopping-cart-o" badge="3">购物车</van-tabbar-item>
-      <van-tabbar-item replace to="/user" icon="friends-o">我的</van-tabbar-item>
+      <van-tabbar-item replace to="/home" icon="wap-home-o"
+        >首页</van-tabbar-item
+      >
+      <van-tabbar-item
+        replace
+        to="/cart"
+        icon="shopping-cart-o"
+        :badge="cartNum"
+        >购物车</van-tabbar-item
+      >
+      <van-tabbar-item replace to="/user" icon="friends-o"
+        >我的</van-tabbar-item
+      >
     </van-tabbar>
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -19,13 +30,29 @@ export default {
       isShowtabber: true,
     };
   },
+  computed: {
+    ...mapState(["cartNum"]),
+  },
   watch: {
     $route(to) {
       const name = to.name;
-      if (name == 'user' || name == 'home' || name == 'cart') {
-        this.isShowtabber = true;
-      } else {
-        this.isShowtabber = false;
+      switch (name) {
+        case "home":
+          this.isShowtabber = true;
+          this.active = 0;
+          break;
+        case "cart":
+          this.isShowtabber = true;
+          this.active = 1;
+          break;
+        case "user":
+          this.isShowtabber = true;
+          this.active = 2;
+          break;
+        default:
+          this.isShowtabber = false;
+          this.active = 0;
+          break;
       }
     },
   },

@@ -6,23 +6,26 @@
       </van-swipe-item>
     </van-swipe>
     <div class="goodList">
-      <router-link to="/details">
+      <router-link
+        :to="'/details?id=' + item.id"
+        v-for="item in goodList"
+        :key="item.id"
+      >
         <van-card
           :price="item.price"
-          origin-price="10.00"
+          :origin-price="item.orginPrice"
           :desc="item.desc"
           :title="item.title"
           :thumb="item.imageUrl"
-          v-for="item in goodList"
-          :key="item.id"
         />
       </router-link>
     </div>
   </div>
 </template>
 <script>
-import { reactive, onMounted, toRefs } from 'vue';
-import { getHomeSwiper, getGoodList } from '@/api/home';
+import { reactive, onMounted, toRefs } from "vue";
+import { getHomeSwiper, getGoodList } from "@/api/home";
+// import { useStore } from "vuex";
 export default {
   setup() {
     const state = reactive({
@@ -37,9 +40,11 @@ export default {
       const res = await getGoodList();
       state.goodList = res.data.list;
     };
+    // const store = useStore();
     onMounted(() => {
       handleGetHomeSwiper();
       handleGoodList();
+      // store.commit("setCartNum", 1);
     });
     return {
       ...toRefs(state),
