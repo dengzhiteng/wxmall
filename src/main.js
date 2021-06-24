@@ -5,7 +5,7 @@ import store from './store';
 import 'lib-flexible/flexible';
 require('./mock/home.js');
 
-import { Button, Cell, CellGroup, Tabbar, TabbarItem, Skeleton, Swipe, SwipeItem, Image as VanImage } from 'vant';
+import { Button, Cell, CellGroup, Tabbar, TabbarItem, Skeleton, Swipe, SwipeItem, Image as VanImage, Card } from 'vant';
 
 createApp(App)
   .use(store)
@@ -19,4 +19,5 @@ createApp(App)
   .use(Swipe)
   .use(SwipeItem)
   .use(VanImage)
+  .use(Card)
   .mount('#app');

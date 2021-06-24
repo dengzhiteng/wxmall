@@ -5,3 +5,8 @@ export const getHomeSwiper = () => {
     url: '/home/swiper',
   });
 };
+export const getGoodList = () => {
+  return request({
+    url: '/good/list',
+  });
+};
