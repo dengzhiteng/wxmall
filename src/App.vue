@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="app">
     <van-skeleton title avatar :row="4" :loading="loading">
       <router-view />
     </van-skeleton>
@@ -28,7 +28,7 @@ export default {
   },
 };
 </script>
-<style >
+<style>
 html,
 body,
 #app {
