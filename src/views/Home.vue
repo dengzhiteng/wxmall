@@ -12,8 +12,10 @@
 import { getHomeSwiper } from '@/api/home';
 export default {
   name: 'Home',
-  created() {
-    getHomeSwiper();
+  mounted() {
+    getHomeSwiper().then((res) => {
+      console.log(res.data);
+    });
   },
 };
 </script>
