@@ -1,12 +1,8 @@
 <template>
   <div>
-    <van-skeleton title avatar :row="4" :loading="loading">
+    <van-skeleton title avatar :row="20" :loading="loading">
       <router-view />
     </van-skeleton>
-    <van-skeleton title avatar :row="4" :loading="loading" />
-    <van-skeleton title avatar :row="4" :loading="loading" />
-    <van-skeleton title avatar :row="4" :loading="loading" />
-
     <van-tabbar v-model="active" v-if="isShowtabber">
       <van-tabbar-item replace to="/home" icon="wap-home-o">首页</van-tabbar-item>
       <van-tabbar-item replace to="/cart" icon="shopping-cart-o" badge="3">购物车</van-tabbar-item>

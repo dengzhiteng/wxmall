@@ -1,5 +1,3 @@
 <template>
-  <div class="about">
-    <h1>This is an about p1123123123ag11e</h1>
-  </div>
+  <div class="about">This is an about p1123123123ag11e</div>
 </template>
